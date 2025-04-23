@@ -60,6 +60,11 @@ header {
     flex-wrap: wrap;
 }
 
+.main-nav a.active {
+    background-color: var(--deepseek-light);
+    font-weight: bold;
+}
+
 .main-nav a {
     color: var(--white);
     text-decoration: none;
