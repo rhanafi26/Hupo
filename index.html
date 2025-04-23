@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koleksi Baju - Usaha Anda</title>
+    <title>Hupo Wear House</title>
     <style>
         :root {
             --deepseek-blue: #1a237e;
@@ -67,19 +67,20 @@
 
         /* Hero Section */
         .hero {
-            height: 500px;
+            height: 400px;
             background: linear-gradient(rgba(26, 35, 126, 0.5), rgba(26, 35, 126, 0.5)), 
                         url('placeholder-bg.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             color: var(--white);
             text-align: center;
+            padding-bottom: 4rem;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             max-width: 800px;
         }
@@ -153,6 +154,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
+            justify-items:center;
         }
 
         .product-card {
@@ -333,8 +335,8 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">HUPO FASHION</div>
-        <button class="profile-btn">Profil</button>
+        <div class="logo">HUPO WEAR HOUSE</div>
+        <button class="profile-btn">HuP</button>
     </header>
 
     <!-- Main Navigation -->
@@ -347,7 +349,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Koleksi Terbaru</h1>
-        <p>Produk berkualitas yang bisa Anda gunakan setiap hari</p>
+        <p>Desain minimalis untuk kenyamanan maksimal</p>
         <button class="btn" id="shopBtn">LIHAT KOLEKSI</button>
     </section>
 
