@@ -1,0 +1,449 @@
+/* style.css - File CSS Terpisah untuk Semua Halaman */
+:root {
+    --deepseek-blue: #1a237e;
+    --deepseek-light: #534bae;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: var(--deepseek-blue);
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    color: var(--deepseek-blue);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: rgba(26, 35, 126, 0.1);
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--deepseek-blue);
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: var(--deepseek-light);
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(26, 35, 126, 0.7)), 
+                url('images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    max-width: 800px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.btn {
+    background-color: var(--white);
+    color: var(--deepseek-blue);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: var(--deepseek-light);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Category Navigation */
+.category-nav {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    background-color: var(--white);
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.category-btn:hover {
+    color: var(--deepseek-blue);
+}
+
+.category-btn.active {
+    color: var(--deepseek-blue);
+    font-weight: bold;
+}
+
+.category-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--deepseek-blue);
+}
+
+/* Products Section */
+.products-section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--deepseek-blue);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%;
+    max-width: 280px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+
+.product-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: var(--deepseek-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* About Page Styles (Untuk halaman sejarah) */
+.about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-content h2 {
+    color: var(--deepseek-blue);
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--deepseek-blue);
+    background: none;
+    border: none;
+}
+
+.modal-product {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.modal-img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 8px;
+}
+
+.modal-details h2 {
+    color: var(--deepseek-blue);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.modal-details p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-details .price {
+    font-size: 1.4rem;
+    color: var(--deepseek-blue);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.order-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.order-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.order-btn img {
+    height: 20px;
+    width: auto;
+}
+
+.wa-btn {
+    background-color: #25D366;
+    color: white;
+}
+
+.shopee-btn {
+    background-color: #FF5722;
+    color: white;
+}
+
+.tokped-btn {
+    background-color: #03AC0E;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: var(--deepseek-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+        padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-nav {
+        gap: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    .main-nav a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .modal-product {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-img {
+        height: 200px;
+    }
+
+    .order-btn {
+        min-width: 150px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}
