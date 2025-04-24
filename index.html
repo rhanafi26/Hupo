@@ -151,10 +151,16 @@
         }
 
         .products-grid {
-            display: grid;
+            /* display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            justify-items:center;
+            gap: 2.5rem;
+            justify-items:center; */
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 90dvw;
+            align-items: center;
+            gap: 2.5rem;
+            justify-content: center;
         }
 
         .product-card {
